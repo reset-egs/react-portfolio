@@ -37,7 +37,7 @@
 
 .disappearing-text {
     overflow: hidden;
-    height: 3em;
+    height: auto;
     transition: height 0.3s ease-in-out;
 }
 
@@ -104,4 +104,10 @@
 
 .txt-rotate>.wrap {
     border-right: 0.08em solid #666;
+}
+
+@media (max-width: 500px) {
+    .disappearing-text {
+        height: 30vh;
+    }
 }

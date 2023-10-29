@@ -208,7 +208,9 @@
 }
 
 @keyframes spincube {
-    from, to {
+
+    from,
+    to {
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
 
@@ -235,10 +237,23 @@
 
 @media (max-width: 768px) {
     .technology {
-        margin-bottom: 20px; /* Add space between technology sections */
+        margin-bottom: 20px;
+        /* Add space between technology sections */
     }
+
     .stage-cube-cont {
         margin-bottom: 300px;
         margin-top: 80px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .background-image-right {
+        top: -50%;
+        position: absolute;
+        bottom: 0;
+        width: 35%;
+        right: 0;
+        z-index: -4;
     }
 }

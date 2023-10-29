@@ -9,6 +9,7 @@ import logo from '../../assets/img/logo.svg'
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('');
   const [scrolled, setScrolled] = useState(false);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,17 +24,22 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+
+  const onToggleHamburger = (isOpen) => {
+    setIsHamburgerOpen(isOpen);
+  };
+
   const onUpdateActiveLink = (link) => {
     setActiveLink(link);
   }
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""} >
+    <Navbar expand="lg" className={scrolled || isHamburgerOpen ? "scrolled" : ""} >
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} alt="Logo" className="white-fill"/>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => onToggleHamburger(!isHamburgerOpen)}>
           <span className='navbar-toggler-icon'></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
