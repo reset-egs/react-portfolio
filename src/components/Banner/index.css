@@ -35,6 +35,31 @@
     width: 96%;
 }
 
+.disappearing-text {
+    min-height: 5em;
+    overflow: hidden;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.3em;
+    height: 1em;
+    background-color: transparent;
+    animation: blink 0.7s step-start infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
 .banner button {
     color: #B8B8B8;
     font-weight: 700;

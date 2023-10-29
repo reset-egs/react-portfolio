@@ -1,6 +1,7 @@
 .contact {
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
     padding: 60px 0 200px 0;
+    z-index: 1;
 }
 
 .contact img {
@@ -26,6 +27,7 @@
     font-size: 18px;
     letter-spacing: 0.8px;
     transition: 0.3s ease-in-out;
+    z-index: 1;
 }
 
 .contact form input:focus,

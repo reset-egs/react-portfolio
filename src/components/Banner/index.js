@@ -12,7 +12,7 @@ const Banner = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = ["Backend", "Frontend", "Fullstack"];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300 - Math.random() * 100);
+    const [delta, setDelta] = useState(100 - Math.random() * 100);
     const period = 1000;
 
 
@@ -41,7 +41,7 @@ const Banner = () => {
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setIndex(index + 1);
-            setDelta(500);
+            setDelta(100);
         }
     };
 
@@ -54,7 +54,7 @@ const Banner = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className='tagline'>Welcome to my Portfolio</span>
-                                    <h1>Hi, I'm Simon -<br></br> <span className='wrap'>{text} Developer</span></h1>
+                                    <h1 className="disappearing-text">Hi, I'm Simon -<br></br> <span className='wrap'>{text}<span className="cursor">|</span> Developer</span></h1>
                                     <p>I'm an ambitious fullstack developer looking for a role in an established IT company,
                                         where I could apply my skills and knowledge to help the company grow while working on
                                         challenging projects.</p>
