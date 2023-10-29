@@ -83,6 +83,7 @@
 
 .banner img {
     animation: updown 3s linear infinite;
+    max-width: 100%;
 }
 
 @keyframes updown {
