@@ -31,7 +31,7 @@ const Contact = () => {
                         confirmButtonText: 'OK',
                         confirmButtonColor: '#ffd700',
                     }).then(() => {
-                        window.location.href = '/';
+                        refForm.current.reset();
                     });
                 },
                 (error) => {

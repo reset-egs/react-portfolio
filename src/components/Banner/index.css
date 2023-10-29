@@ -36,7 +36,6 @@
 }
 
 .disappearing-text {
-    min-height: 5em;
     overflow: hidden;
 }
 
