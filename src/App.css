@@ -1,0 +1,48 @@
+/* Imports */
+@font-face {
+  font-family: Centra Bold;
+  src: 
+      url('./assets/font/CentraNo2-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Centra Book;
+  src: 
+      url('./assets/font/CentraNo2-Book.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Centra Medium;
+  src: 
+      url('./assets/font/CentraNo2-Medium.woff') format('woff');
+  font-weight: 400;
+}
+
+/*  Default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: Centra Medium, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
