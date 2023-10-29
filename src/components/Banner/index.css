@@ -37,6 +37,8 @@
 
 .disappearing-text {
     overflow: hidden;
+    height: 3em;
+    transition: height 0.3s ease-in-out;
 }
 
 .cursor {
